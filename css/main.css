@@ -22,21 +22,36 @@ img {
 }
 /********MENU PRINCIPAL*********************/
 header{
-	background-image: url(../assets/images/hero.gif);
+	/*background-image: url(../assets/images/hero.gif);
 	background-repeat: no-repeat;
-	background-size: cover;
-	padding: 25px 0 0 0;
+	background-size: cover;*/
+	padding: 0;
+	margin: 0
+
+}
+.imagePrincipal{
+	width: 100%;
+	padding: 0;
+	margin: 0
+}
+header .navBar{
+	height: 120px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding-top: 25px;
 }
 .logoWhite{
 	width: 65px;
 	height: 45px;
 	position: relative;
 	margin-left: 22px;
-}
+} 
 .logoPink{
 	width: 65px;
 	height: 45px;
 	display: none;
+	margin-left: 22px;
 	position: relative;
 }
 .menuPrincipal li{
@@ -45,9 +60,52 @@ header{
 	font-weight: 300;
 	font-size: 19px;
 	margin: 0px 18px;
+	cursor: pointer;
 }
-.signUp{
-	
+.logIn{
+	border:1px solid #fff;
+	padding: 10px;
+	border-radius: 10px;
+}
+header .signUp{
+	border:1px solid #FF00BF;
+	padding: 10px;
+	border-radius: 10px;
+	color: #FF00BF;
+	position: absolute;
+	right: -120px;
+}
+header .navBar:hover .fa-chevron-down{
+	color: #333447;
+	-webkit-transition: .3s;
+	transform: scale(1.0) rotate(180deg);
+}
+header .navBar:hover .menuPrincipal .logIn{
+	border:1px solid #d8dce6;
+}
+header .navBar:hover .menuPrincipal li{
+	color: #333447;
+}
+header .navBar:hover .signUp{
+	right: 25px;
+	-webkit-transition: .4s;
+}
+header .navBar:hover .logoWhite{
+	display: none;
+}
+header .navBar:hover .logoPink{
+	display: inline-block;
+}
+header .navBar:hover{
+	background-color: white;
+}
+.menuPrincipal li:hover{
+	color: #FF00BF;
+}
+.fa-chevron-down{
+	font-size: 15px;
+	margin-left: 5px;
+	font-weight:lighter;
 }
 label{
 	display: none;
@@ -56,18 +114,44 @@ label{
 	
 }
 .logo{
-	width: 710px;
+	width: 700px;
 }
 /*formulario****/
 .form{
-	background-color: #fff;
+	background-color: #ffffff;
 	width: 576px;
 	padding: 50px;
-	margin-left: 57.3%;
-	margin-top: 28px;
+	margin-top: -635px;
+	margin-left: 773px;
+	position: relative;
 }
 .form li{
 	list-style: none;
+}
+.form ul{
+	padding-left: 0;
+}
+.form h2,h1{
+	font-size: 2.5rem;
+	font-weight: 600;
+    line-height: 1.1;
+    color: #352384;
+    padding: 0;
+    margin: 0
+}
+.form p{
+	font-size: .875rem;
+	color: #352384;
+	font-weight: 300;
+}
+.form .base{
+	color: #728099;
+	font-size: .6rem;
+	font-weight: 300;
+}
+.form .base a{
+	color: #ff00bf;
+    text-decoration: none;
 }
 .textCamp{
 	position: relative;
@@ -94,6 +178,9 @@ input:focus{
 input::placeholder{
 	color: #7a8d9f;
 }
+.btn{
+	cursor: pointer;
+}
 .btn-1{
 	display: inline-block;
 	width: 200px;
@@ -103,6 +190,8 @@ input::placeholder{
 .btn-2{
 	display: inline-block;
 	width: 200px;
+	color: #728099;
+	font-weight: 300;
 }
 .btn-2:hover{
 	display: inline-block;
@@ -118,31 +207,11 @@ input::placeholder{
 	border-radius: 10px;
 	margin-right: 20px;
 }
-/*
-.submit{
-	float: left;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 500;
-    color: #fff;
-    border-color: #18bc9c;
-    background-color: #18bc9c;
-    padding: .5rem 1rem;
-    font-size: 18px;
-    line-height: 1.5;
-    border-radius: .3rem;
-   width: 79px;
-   text-align: center;
-   font-stretch: condensed;
-   margin-top: 25px;
-   cursor: pointer;
-}
-.submit:hover{
-	background-color:  #128f76;
-}*/
+
 /************CELULAR*************************/
 .secondSection{
-	background:linear-gradient(#76278F, #2B1E66); 
-	padding: 60px 170px 20px 170px;
+	background:linear-gradient(#76278f,#2b1e66); 
+	padding: 220px 170px 20px 170px;
 }
 .celular{
 	background-image: url(../assets/images/phone.png);
@@ -158,7 +227,7 @@ input::placeholder{
 .containerCel{
 	display: inline-block;
 	position: relative;
-	bottom: 100px	
+	bottom: 100px;
 }
 .containerCel p{
 	width: 450px;
@@ -167,7 +236,6 @@ input::placeholder{
 	margin-top: 1rem;
 	font-size: 16px;
 	font-weight: 300;
-	
 }
 h3{
 	margin:0;
