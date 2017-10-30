@@ -16,4 +16,4 @@ Realización de página solicitada con modelo específico.
 6.	Se actualiza README.
 7.	Creación de comentarios.
 8.	Diseño final idéntico al modelo.
-9.  	Se enlaza CSS a HTML.
+9.	Se enlaza CSS a HTML.
